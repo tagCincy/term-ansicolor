@@ -1,0 +1,1 @@
+var tree = [["","","files",[["README.rdoc","files/README_rdoc.html","",[]],["","","lib",[["","","term",[["","","ansicolor",[["version.rb","files/lib/term/ansicolor/version_rb.html","",[]]]],["ansicolor.rb","files/lib/term/ansicolor_rb.html","",[]]]]]]]],["Term","classes/Term.html","",[["ANSIColor","classes/Term/ANSIColor.html","",[]]]]]
