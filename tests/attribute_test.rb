@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class AttributeTest < Test::Unit::TestCase
-  include Term::ANSIColor
+  include ANSITerm::ANSIColor
 
   def test_cast
     color = Attribute.get(:color123)

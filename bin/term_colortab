@@ -3,14 +3,14 @@
 require 'term/ansicolor'
 
 class String
-  include Term::ANSIColor
+  include ANSITerm::ANSIColor
 end
 
 def print_color(c)
-  color = Term::ANSIColor::Attribute[c]
+  color = ANSITerm::ANSIColor::Attribute[c]
   text = [
-    Term::ANSIColor::Attribute.nearest_rgb_color('#000'),
-    Term::ANSIColor::Attribute.nearest_rgb_color('#fff'),
+      ANSITerm::ANSIColor::Attribute.nearest_rgb_color('#000'),
+      ANSITerm::ANSIColor::Attribute.nearest_rgb_color('#fff'),
   ].max_by { |t| t.distance_to(color) }
   print ("%3u #{color.rgb.html} " % c).on_color(color.name).color(text.name)
 end

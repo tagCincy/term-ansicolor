@@ -1,4 +1,4 @@
-module Term
+module ANSITerm
 
   # The ANSIColor module can be used for namespacing and mixed into your own
   # classes.
@@ -81,7 +81,7 @@ module Term
     def color(name, string = nil, &block)
       attribute = Attribute[name] or raise ArgumentError, "unknown attribute #{name.inspect}"
       result = ''
-      result << "\e[#{attribute.code}m" if Term::ANSIColor.coloring?
+      result << "\e[#{attribute.code}m" if ANSITerm::ANSIColor.coloring?
       if block_given?
         result << yield
       elsif string.respond_to?(:to_str)
@@ -91,7 +91,7 @@ module Term
       else
         return result #only switch on
       end
-      result << "\e[0m" if Term::ANSIColor.coloring?
+      result << "\e[0m" if ANSITerm::ANSIColor.coloring?
       result
     end
 
@@ -103,7 +103,7 @@ module Term
     class << self
       # Returns an array of all Term::ANSIColor attributes as symbols.
       def term_ansicolor_attributes
-        ::Term::ANSIColor::ATTRIBUTE_NAMES
+        ::ANSITerm::ANSIColor::ATTRIBUTE_NAMES
       end
 
       alias attributes term_ansicolor_attributes
@@ -111,7 +111,7 @@ module Term
 
     # Returns an array of all Term::ANSIColor attributes as symbols.
     def  term_ansicolor_attributes
-      ::Term::ANSIColor.term_ansicolor_attributes
+      ::ANSITerm::ANSIColor.term_ansicolor_attributes
     end
 
     alias attributes term_ansicolor_attributes

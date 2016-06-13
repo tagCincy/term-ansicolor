@@ -15,7 +15,7 @@ def draw_set(rx, ry)
   sx = (rx.end - rx.begin).abs / @width
   sy = (ry.end - ry.begin).abs / @height
 
-  ac = Term::ANSIColor
+  ac = ANSITerm::ANSIColor
   color =
     ac::Attribute[ color_random ].gradient_to(ac::Attribute[ color_random ], :steps => 16) +
     ac::Attribute[ color_random ].gradient_to(ac::Attribute[ color_random ], :steps => 16) +

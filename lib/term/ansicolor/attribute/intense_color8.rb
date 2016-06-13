@@ -1,4 +1,4 @@
-module Term
+module ANSITerm
   module ANSIColor
     class Attribute
       class IntenseColor8

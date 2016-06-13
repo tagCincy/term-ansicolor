@@ -1,4 +1,4 @@
-module Term::ANSIColor
+module ANSITerm::ANSIColor
   # Term::ANSIColor version
   VERSION         = '1.3.0'
   VERSION_ARRAY   = VERSION.split('.').map(&:to_i) # :nodoc:
